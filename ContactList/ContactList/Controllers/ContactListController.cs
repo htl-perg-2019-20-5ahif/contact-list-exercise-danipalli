@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using System.ComponentModel.DataAnnotations;
 
 namespace ContactList.Controllers
 {
@@ -19,7 +16,7 @@ namespace ContactList.Controllers
 
         [HttpGet]
         [Route("findByName", Name = "GetSpecificItem")]
-        public IActionResult GetContact([FromQuery] string nameFilter)
+        public IActionResult GetContact([Required(ErrorMessage = "Filter argument required.")][FromQuery] string nameFilter)
         {
             List<Person> filteredContacts = new List<Person>();
             foreach (Person person in contacts)
@@ -37,8 +34,8 @@ namespace ContactList.Controllers
             return BadRequest("Invalid or missing name");
         }
 
-        [HttpPost]
-        public IActionResult AddContact([FromBody] Person newContact)
+        [HttpPost] 
+        public IActionResult AddContact([Required(ErrorMessage = "Data in body required.")][FromBody] Person newContact)
         {
             if(newContact.id == 0 || newContact.email == null)
             {
