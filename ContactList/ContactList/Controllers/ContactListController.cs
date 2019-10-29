@@ -16,7 +16,7 @@ namespace ContactList.Controllers
 
         [HttpGet]
         [Route("findByName", Name = "GetSpecificItem")]
-        public IActionResult GetContact([Required(ErrorMessage = "Filter argument required.")][FromQuery] string nameFilter)
+        public IActionResult GetContact([FromQuery] string nameFilter)
         {
             List<Person> filteredContacts = new List<Person>();
             foreach (Person person in contacts)
@@ -35,9 +35,9 @@ namespace ContactList.Controllers
         }
 
         [HttpPost] 
-        public IActionResult AddContact([Required(ErrorMessage = "Data in body required.")][FromBody] Person newContact)
+        public IActionResult AddContact([FromBody] Person newContact)
         {
-            if(newContact.id == 0 || newContact.email == null)
+            if(newContact.id == 0)
             {
                 return BadRequest("Invalid input (e.g. required field missing or empty)");
             }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Schule\\5AHIF\\Mobile_Computing\\Homework\\contact-list-exercise-danipalli\\ContactList\\ContactList\\ContactList.csproj",
+      "projectUniqueName": "E:\\Schule\\5AHIF\\Mobile_Computing_C#\\Homework\\contact-list-exercise-danipalli\\ContactList\\ContactList\\ContactList.csproj",
       "projectName": "ContactList",
-      "projectPath": "E:\\Schule\\5AHIF\\Mobile_Computing\\Homework\\contact-list-exercise-danipalli\\ContactList\\ContactList\\ContactList.csproj",
+      "projectPath": "E:\\Schule\\5AHIF\\Mobile_Computing_C#\\Homework\\contact-list-exercise-danipalli\\ContactList\\ContactList\\ContactList.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "E:\\Schule\\5AHIF\\Mobile_Computing\\Homework\\contact-list-exercise-danipalli\\ContactList\\ContactList\\obj\\",
+      "outputPath": "E:\\Schule\\5AHIF\\Mobile_Computing_C#\\Homework\\contact-list-exercise-danipalli\\ContactList\\ContactList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
